@@ -1,0 +1,37 @@
+https://codesandbox.io/s/8v0m5?file=/src/history.js
+https://medium.com/@nutanbhogendrasharma/design-page-layout-and-styling-in-react-application-part-3-448d70263f70
+
+
+CSS:
+Flex--Grid (flex: <flex-grow> <flex-shrink> <flex-basis>)
+1. flex: 0 auto
+    - same as flex: initial, and shorthand for flex: 0 1 auto
+    - it sizes the item based on the its width/height properties.
+    - makes the flex item inflexible when there is some free space left
+    - but allows it to shrink to its min. where there is not enough space.
+    - auto margins can be used to align flex items along the main axis.
+
+2. flex: auto
+    - equivalent to flex: 1 1 auto (not default)
+    - it sizes the item based on its width/height properties, but makes it fully flexible 
+        so that they absorb any extra space along the main axis.
+    - if all items are either flex: auto | initial | none, any remaing space after the items have been sized will be distributed evenly to the items with flex: auto.
+
+3. flex: none
+    - euivalent to flex: 0 0 auto.
+    - It sizes the item according to its width/height properties, but makes it fully inflexible.
+
+
+4. flex: <positive-number>
+    - equivalent to flex: 1 0 px. It makes the flex item flexible and sets the flex basis to zero.
+    - resulting in an item that receives the specified porportion of the remaining space.
+    - If all items in the flex container use this pattern, their sizes will be proportional to the specified flex factor.
+
+Example:
+.flex {
+    flex: auto
+}
+
+.flex-item {
+    flex: 1 100px;      // equivalent to flex-grow: 1, 
+}
