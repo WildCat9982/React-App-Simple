@@ -35,3 +35,32 @@ Example:
 .flex-item {
     flex: 1 100px;      // equivalent to flex-grow: 1, 
 }
+
+
+// CSS Position:
+
+* static - default value, elements render in order, as they appear in the document flow
+* absolute - The element is positioned relative to its first positioned (not static) ancestor element
+* fixed - the element is positioned relative to the browser windows
+* relative - the element is positioned relative to its normal position
+* sticky - the element is positioned based on the user's scroll position.
+    > stay between relative & fixed, depending on the scroll position.
+    > It is positioned relative until a given offset position is met the viewport.
+* initial - Set this poroperty to its default value.
+* inherit - Inhertis this property from its parent element.
+
+
+
+// Padding/Margin: TOP | RIGHT | BOTTOM | LEFT
+padding: 25px                   // all direction
+padding: 25px 50px 75px 100px;
+padding: 25px 50px 75px;        // padding top: 25px, right & left: 50px, bottom: 75px
+padding: 25px 50px;             // padding top and bottom 25px, right and left: 50px
+
+** remarks:
+- add padding to the element with specified width, it will be added to the total width of the element.
+div {
+    width: 300px;
+    padding: 25px;
+} 
+
